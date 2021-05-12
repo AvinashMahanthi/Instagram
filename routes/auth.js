@@ -8,8 +8,6 @@ const jwt = require('jsonwebtoken')
 const  keys  = require('../keys')
 const requireLogin = require("../middleware/requireLogin")
 
-
-
 router.get("/", (req, res) => {
     res.send("routes")
 })
@@ -78,7 +76,7 @@ router.post("/signup", (req, res) => {
                     }).catch(err => {
                             console.log(err);
                         })
-            })     
+            })
         }).catch(err => {
             console.log(err);
         })
